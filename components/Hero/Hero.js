@@ -103,14 +103,11 @@ const Hero = () => {
             Let&apos;s Talk
           </Button>
         </div>
-        <span className="staggered-reveal text-gray-light-3 font-mono text-2xl">
-          Checkout my terminal based portfolio
-        </span>
         <p className="staggered-reveal text-gray-light-3 font-mono text-2xl">
           <a
             className="link "
             href="
-            https://terminal.moez.eu.org/"
+            https://termi.moez.eu.org/"
           >
           <h4 className={`${styles.heroName} text-white text-6xl `}>
           <span className={`relative ${styles.emphasize} staggered-reveal`}>
