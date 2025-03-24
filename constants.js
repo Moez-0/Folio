@@ -44,7 +44,7 @@ export const MENULINKS = [
 ];
 
 export const TYPED_STRINGS = [
-  "A passionate Sofwatware Engineer",
+  "A passionate Software Engineer",
   "I build things for the web",
   "I create aesthetic and modern apps",
 ];
