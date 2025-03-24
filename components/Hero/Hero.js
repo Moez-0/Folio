@@ -109,11 +109,10 @@ const Hero = () => {
             href="
             https://termi.moez.eu.org/"
           >
-          <h4 className={`${styles.heroName} text-white text-6xl `}>
           <span className="staggered-reveal text-3xl text-gray-light-3 font-mono leading-relaxed" >
             checkout terminal version
           </span>
-          </h4>
+        
           </a>
         </p>
       </div>
