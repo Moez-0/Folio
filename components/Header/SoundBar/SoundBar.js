@@ -3,19 +3,28 @@ import audio from "../../../public/sounds/music.mp3";
 
 const SoundBar = () => {
   const soundBarEl = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    const audioEl = soundBarEl.current;
+    if (audioEl) {
+      const playAudio = () => {
+        audioEl.play().catch((error) => console.error("Autoplay blocked:", error));
+        document.removeEventListener("click", playAudio);
+      };
+      document.addEventListener("click", playAudio); 
+    }
+
+    document.querySelector(".soundBars").onclick = function () {
+      this.classList.toggle("play");
+    };
+  }, []);
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
     if (!isPlaying) soundBarEl.current.play();
     else soundBarEl.current.pause();
   };
-
-  useEffect(() => {
-    document.querySelector(".soundBars").onclick = function () {
-      this.classList.toggle("play");
-    };
-  }, []);
 
   return (
     <div
